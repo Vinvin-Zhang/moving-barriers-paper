@@ -31,7 +31,7 @@ cdef class smcTranslocatorDirectional(object):
     cdef cython.long [:] SMCs2
     cdef cython.long [:] stalled1 
     cdef cython.long [:] stalled2
-    cdef cython.long [:] occupied    #<<  whether or not this site in polymer is occupied by SMC,  wwz
+    cdef cython.long [:] occupied    #<<wwz  whether or not this site in polymer is occupied by SMC regardless of Pol occupancy,  note: self.PolPos is used to define whether or not this site is occupied by Pol. 
     cdef cython.long [:] collision1 # list of whether SMC has collided with an RNAP (by default only flags collisions where RNAP runs into one of the legs)    
     cdef cython.long [:] collision2
     cdef double lefperm
